@@ -6,7 +6,7 @@ on:
     - cron: '0 4 * * *' # Check for updates every day at 4am UTC
 
 env:
-  REGISTRY: ${{ env.REGISTRY }}
+  REGISTRY: ghcr.io
   UPSTREAM_REPO: autobcb/read
 
 jobs:
