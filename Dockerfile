@@ -1,5 +1,5 @@
-# Use the Java 21 Runtime (JRE) - lightweight, no compiler tools
-FROM eclipse-temurin:21-jre
+# Use the Java 25 Runtime (JRE) - lightweight, no compiler tools
+FROM eclipse-temurin:25-jre
 
 WORKDIR /app
 

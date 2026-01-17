@@ -1,14 +1,14 @@
 services:
   read-server:
     # Replace with YOUR github username and repo
-    image: ghcr.io/otwako/qyd-read-docker:latest
+    image: ghcr.io/otwako/qyd-reader-docker:latest
     container_name: qyd-reader
     restart: unless-stopped
     ports:
       - ":8080"
     volumes:
       # REQUIRED: Mount and override with your configuration file
-      - ./data/conf.yml:/app/conf.yml
+      - ./conf.yml:/app/conf.yml
       # OPTIONAL: Mount storage for local books/covers if needed
       - ./data/books:/app/books
     environment:
