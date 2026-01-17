@@ -2,6 +2,9 @@ name: Docker Image Build CI for GHCR
 
 on:
   workflow_dispatch: # Button to manually trigger update
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 4 * * *' # Check for updates every day at 4am UTC
 
