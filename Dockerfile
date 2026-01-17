@@ -4,10 +4,7 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 
 # We expect the GitHub Action to place the downloaded jar here as 'read.jar'
-COPY read.jar /app/read.jar
-
-# Create the data volume mount point
-VOLUME /app/data
+COPY ./app /app
 
 # Expose the port
 EXPOSE 8080

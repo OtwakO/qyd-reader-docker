@@ -47,9 +47,9 @@ jobs:
         --dir ./downloads
 
         echo "Unzipping..."
-        unzip ./downloads/web*.zip -d ./
+        unzip ./downloads/web*.zip -d ./app
 
-        if [ ! -f ./read.jar ]; then
+        if [ ! -f ./app/read.jar ]; then
         echo "Error: Could not find a .jar file in the downloaded release!"
         exit 1
         fi

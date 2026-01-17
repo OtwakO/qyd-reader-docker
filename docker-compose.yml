@@ -5,11 +5,11 @@ services:
     container_name: qyd-reader
     restart: unless-stopped
     ports:
-      - "8080:8080"
+      - ":8080"
     volumes:
-      # REQUIRED: Mount your configuration file
+      # REQUIRED: Mount and override with your configuration file
       - ./data/conf.yml:/app/conf.yml
-      # OPTIONAL: Mount storage for books/covers if needed
+      # OPTIONAL: Mount storage for local books/covers if needed
       - ./data/books:/app/books
     environment:
       - TZ=Asia/Taipei
